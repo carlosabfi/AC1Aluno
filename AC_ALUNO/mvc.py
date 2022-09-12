@@ -25,7 +25,7 @@ def aluno():
     if nome and cpf and endereco:
         conn = mysql.connect()
         cursor = conn.cursor()
-        cursor.execute('insert into tbl_aluno (user_name, user_cpf, user_endereco) VALUES (%s, %s, %s)', (nome, cpf, endereco))
+        cursor.execute('insert into alunos (user_name, user_cpf, user_endereco) VALUES (%s, %s, %s)', (nome, cpf, endereco))
         conn.commit()
     return render_template('formulario.html')
 
