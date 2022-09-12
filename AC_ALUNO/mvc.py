@@ -17,7 +17,7 @@ def main():
     return render_template('formulario.html')
 
 
-@app.route('/aluno', methods=['POST', 'GET'])
+@app.route('/formulario', methods=['POST', 'GET'])
 def aluno():
     nome = request.form['nome']
     cpf = request.form['cpf']
